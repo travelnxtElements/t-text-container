@@ -24,10 +24,19 @@
             :host ::content .margin-bottom{
                 margin-bottom: 5px;
             }
-        	:host ::content .link-style{
-        		color: var(--link-color,#0098ff);
-        		text-decoration: underline;
-        	}
+            :host ::content .link-style{
+                color: var(--link-color,#0098ff);
+                text-decoration: underline;
+            }
+            :host ::content .textRight{
+                text-align: right;
+            }
+            :host ::content .textLeft{
+                text-align: left;
+            }
+            :host ::content .textCenter{
+                text-align: center;
+            }
         </style>
         <div><content select="*"></content></div>
     </template>
