@@ -3,62 +3,62 @@
 <dom-module id="t-text-container">
     <template>
         <style>
-        	:host ::content .font-16{
+        	:host ::slotted(.font-16) {
         		font-size: var(--font-16,16px);
         	}
-        	:host ::content .font-12{
+        	:host ::slotted(.font-12) {
         		font-size: var(--font-12,12px);
         	}
-        	:host ::content .primary-text{
+        	:host ::slotted(.primary-text) {
         		color: var(--grey-eight,#111111);
         	}
-        	:host ::content .primary-light-text{
+        	:host ::slotted(.primary-light-text) {
         		color: var(--grey-six,#333333);
         	}
-            :host ::content .secondary-text{
+            :host ::slotted(.secondary-text){
                 color: var(--grey-three,#bbbbbb);
             }
-            :host ::content .section{
+            :host ::slotted(.section){
                 padding: 20px 10px;
             }
-            :host ::content .section-small{
+            :host ::slotted(.section-small){
                 padding: 10px;
             }
-            :host ::content .margin-bottom{
+            :host ::slotted(.margin-bottom){
                 margin-bottom: 5px;
             }
-            :host ::content .link-style{
+            :host ::slotted(.link-style){
                 color: var(--link-color,#0098ff);
                 text-decoration: none;
             }
-            :host ::content .text-right{
+            :host ::slotted(.text-right){
                 text-align: right;
             }
-            :host ::content .text-left{
+            :host ::slotted(.text-left){
                 text-align: left;
             }
-            :host ::content .text-center{
+            :host ::slotted(.text-center){
                 text-align: center;
             }
-            :host ::content .font-light{
+            :host ::slotted(.font-light){
                 font-weight: 100;
             }
-            :host ::content .font-normal{
+            :host ::slotted(.font-normal){
                 font-weight: normal;
             }
-            :host ::content .font-semi{
+            :host ::slotted(.font-semi){
                 font-weight: 600;
             }
-            :host ::content .font-bold{
+            :host ::slotted(.font-bold){
                 font-weight: 900;
             }
-            :host ::content .border-bottom{
+            :host ::slotted(.border-bottom){
                 border-bottom: 1px solid var(--grey-two,#eeeeee);
             }
-            :host ::content .capitalize{
+            :host ::slotted(.capitalize){
                 text-transform: capitalize;
             }
-            :host ::content .ellipsis-2{
+            :host ::slotted(.ellipsis-2){
                 display: block;
                 /* Fallback for non-webkit */
                 display: -webkit-box;
@@ -67,7 +67,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            :host ::content .ellipsis{
+            :host ::slotted(.ellipsis){
                 width: 100%;
                 white-space: nowrap;
                 overflow: hidden;
@@ -75,7 +75,7 @@
                 text-overflow: ellipsis;
             }
         </style>
-        <div><content select="*"></content></div>
+        <div><slot name="*"></slot></div>
     </template>
 </dom-module>
 <script>
